@@ -1,0 +1,5 @@
+Added an executable call-sequence reference (``docs/call_sequence.rst``)
+backed by table-driven tests in ``testing/test_call_sequence.py``: wrapper
+setup/teardown order, result reduction, exception propagation, historic
+replay, ``subset_hook_caller``, dynamic unregistration and signature trimming
+are each pinned by an ordered event-stream test case.

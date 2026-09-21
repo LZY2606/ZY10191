@@ -370,6 +370,10 @@ For another example see the :ref:`pytest:plugin-hookorder` section of the
     ``tryfirst`` and ``trylast`` hooks are still invoked in LIFO order within
     each category.
 
+For the exact interleaving of wrappers and non-wrappers, including an
+executable timing table for ``tryfirst``/``trylast``, see
+:ref:`call_sequence`.
+
 
 .. _hookwrappers:
 
@@ -435,7 +439,9 @@ The function should do one of two things:
 The return value or exception propagate to further hook wrappers, and finally
 to the hook caller.
 
-Also see the :ref:`pytest:hookwrapper` section in the ``pytest`` docs.
+Also see the :ref:`pytest:hookwrapper` section in the ``pytest`` docs, and
+:ref:`call_sequence` for executable timing tables of wrapper setup/teardown
+order and exception propagation.
 
 .. _old_style_hookwrappers:
 
@@ -649,7 +655,8 @@ immediately at register time and **can not** return a result to the caller.
 This turns out to be particularly useful when dealing with lazy or
 dynamically loaded plugins.
 
-For more info see :ref:`call_historic`.
+For more info see :ref:`call_historic`; the replay order and its
+concurrency boundary are specified in :ref:`call_sequence`.
 
 
 .. _warn_on_impl:
@@ -1054,6 +1061,7 @@ Table of contents
     :maxdepth: 2
 
     api_reference
+    call_sequence
     changelog
 
 
