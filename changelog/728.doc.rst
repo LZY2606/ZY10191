@@ -1,0 +1,5 @@
+Added an executable, table-driven hook call sequence guide
+(``docs/hook_call_sequence.rst``) documenting wrapper setup/teardown order,
+plain implementation order, exception propagation, result reduction, historic
+replay and dynamic (un)registration, with matching tests in
+``testing/test_sequence.py``.

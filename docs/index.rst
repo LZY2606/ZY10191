@@ -858,6 +858,11 @@ The only exception to this behaviour is if the hook has been marked to return
 its :ref:`first result only <firstresult>` in which case only the first
 single value (which is not ``None``) will be returned.
 
+For a precise, table-driven description of wrapper setup/teardown order,
+plain implementation order, exception propagation, result reduction,
+historic replay and dynamic (un)registration -- each backed by an
+executable test case -- see :ref:`hook_call_sequence`.
+
 .. _call_historic:
 
 Exception handling
@@ -1053,6 +1058,7 @@ Table of contents
 .. toctree::
     :maxdepth: 2
 
+    hook_call_sequence
     api_reference
     changelog
 
